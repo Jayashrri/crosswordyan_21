@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 8081;
 const bodyParser = require("body-parser");
-const api_routes = require("./api/routes");
+const api_routes = require("./api/routers/routes");
 const app = express();
 //configure database 
 
