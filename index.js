@@ -28,11 +28,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.set("view engine", "ejs");
 
 app.use("/api", api_routes);
 
-app.get("/*", (req, res) => {
-  res.sendFile("index.html",{
+app.get("/home", (req, res) => {
+  res.render("home",{
     root: path.join(__dirname, 'public')
   });
 });
