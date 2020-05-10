@@ -9,5 +9,9 @@ module.exports = {
     },
     session: {
         secretString: "may the force be with you"
+    },
+    imap: {
+        host: "203.129.195.133",
+        port: 143
     }
 };
