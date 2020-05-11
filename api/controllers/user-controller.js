@@ -52,6 +52,23 @@ exports.loginUser = async (req,res) => {
         req.session.user = {
             name: username
         }
+        let user = await User.findOne({username:username});
+        if(!user)  // new users
+        {
+            let userObj = {
+                username:username,
+                lastUpdated: Date.now()
+            }
+            // console.log(userObj);
+            let newUser = new User(userObj);
+
+            newUser.save(err => {
+                if(err){
+                  console.error(err);
+                  return res.redirect('/login');
+                }
+            })
+        }
         return res.redirect('/user/game');
     }
 }
@@ -68,6 +85,16 @@ exports.saveGame = (req,res) => {
     signale.success("Game saved");
 }
 
-exports.renderLeaderboard = (req,res) => {
-    res.render('Leaderboard');
+exports.renderLeaderboard = async(req,res) => {
+    
+    try{
+        let users = await User.find().sort({score:-1,lastUpdated:1});
+        // console.log(users);   
+        res.render('Leaderboard',{
+            users: users
+        });
+    }
+    catch(err){
+        console.error(err);
+    }
 }

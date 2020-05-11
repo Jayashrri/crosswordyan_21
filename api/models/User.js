@@ -1,14 +1,17 @@
 const mongoose = require('mongoose');
+const word = require('./Word');
 
 const UserSchema = mongoose.Schema ({
-     username:String,
-     password:String,
-     gameStatus:{
-         type:Boolean,
-         default: false
+     username: String,
+     score: {
+        type: Number,
+        default: 0
      },
-     score:Number
-
+     lastUpdated: Date,
+     completed: [{
+          type:mongoose.Schema.Types.ObjectId,
+          ref:'word'
+     }]
 })
 
 
