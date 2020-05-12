@@ -9,8 +9,8 @@ const WordSchema = mongoose.Schema ({
     startIndex: {
         x: Number,
         y: Number
-    }
-    
+    },
+    gridId: Number
         
 })
 

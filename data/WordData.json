@@ -1,0 +1,158 @@
+[
+    {
+        "word": "sustainability",
+        "length": 14,
+        "orientation": "down",
+        "number": 1,
+        "clue": "Clue 1",
+        "startIndex": {
+            "x": 5,
+            "y": 0
+        },
+        "gridId": 0
+    },
+    {
+        "word": "carbondioxide",
+        "length": 13,
+        "orientation": "across",
+        "number": 2,
+        "clue": "Clue 2",
+        "startIndex": {
+            "x": 4,
+            "y": 4
+        },
+        "gridId": 0
+    },
+    {
+        "word": "windenergy",
+        "length": 10,
+        "orientation": "down",
+        "number": 3,
+        "clue": "Clue 3",
+        "startIndex": {
+            "x": 19,
+            "y": 4
+        },
+        "gridId": 0
+    },
+    {
+        "word": "fossilfuels",
+        "length": 11,
+        "orientation": "down",
+        "number": 4,
+        "clue": "Clue 4",
+        "startIndex": {
+            "x": 11,
+            "y": 6
+        },
+        "gridId": 0
+    },
+    {
+        "word": "solar",
+        "length": 5,
+        "orientation": "down",
+        "number": 5,
+        "clue": "Clue 5",
+        "startIndex": {
+            "x": 7,
+            "y": 7
+        },
+        "gridId": 0
+    },
+    {
+        "word": "biomass",
+        "length": 7,
+        "orientation": "across",
+        "number": 6,
+        "clue": "Clue 6",
+        "startIndex": {
+            "x": 5,
+            "y": 8
+        },
+        "gridId": 0
+    },
+    {
+        "word": "climate",
+        "length": 7,
+        "orientation": "across",
+        "number": 7,
+        "clue": "Clue 7",
+        "startIndex": {
+            "x": 13,
+            "y": 8
+        },
+        "gridId": 0
+    },
+    {
+        "word": "combustion",
+        "length": 10,
+        "orientation": "down",
+        "number": 7,
+        "clue": "Clue 7",
+        "startIndex": {
+            "x": 13,
+            "y": 8
+        },
+        "gridId": 0
+    },
+    {
+        "word": "methane",
+        "length": 7,
+        "orientation": "across",
+        "number": 8,
+        "clue": "Clue 8",
+        "startIndex": {
+            "x": 13,
+            "y": 10
+        },
+        "gridId": 0
+    },
+    {
+        "word": "energy",
+        "length": 6,
+        "orientation": "across",
+        "number": 9,
+        "clue": "Clue 9",
+        "startIndex": {
+            "x": 0,
+            "y": 13
+        },
+        "gridId": 0
+    },
+    {
+        "word": "lead",
+        "length": 4,
+        "orientation": "down",
+        "number": 10,
+        "clue": "Clue 10",
+        "startIndex": {
+            "x": 15,
+            "y": 13
+        },
+        "gridId": 0
+    },
+    {
+        "word": "weather",
+        "length": 7,
+        "orientation": "across",
+        "number": 11,
+        "clue": "Clue 11",
+        "startIndex": {
+            "x": 10,
+            "y": 14
+        },
+        "gridId": 0
+    },
+    {
+        "word": "calories",
+        "length": 8,
+        "orientation": "across",
+        "number": 12,
+        "clue": "Clue 12",
+        "startIndex": {
+            "x": 4,
+            "y": 16
+        },
+        "gridId": 0
+    }
+]

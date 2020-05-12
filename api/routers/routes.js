@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const user = require('../controllers/user-controller');
+const game = require('../controllers/game-controller');
 
 // sessionChecker middlewares
 let sessionChecker = (req, res, next) => {
@@ -19,7 +20,7 @@ let sessionChecker = (req, res, next) => {
 router.post('/login',user.loginUser);
 
 // game
-router.get('/game',sessionChecker,user.renderGame);
+router.get('/game',sessionChecker,game.renderGrid);
 router.post('/game',sessionChecker,user.saveGame);
 
 // Completion Page

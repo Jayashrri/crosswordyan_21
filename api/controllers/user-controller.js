@@ -73,10 +73,6 @@ exports.loginUser = async (req,res) => {
     }
 }
 
-exports.renderGame = (req,res) => {
-    res.render("Game");
-}
-
 exports.renderAfterGame = (req,res) => {
     res.render('AfterGame');
 }
