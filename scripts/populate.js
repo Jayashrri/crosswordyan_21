@@ -1,6 +1,7 @@
 const Grid = require('../api/models/Grid');
 const Word = require('../api/models/Word');
 const config = require('../config/config');
+const encryption = require('../api/helpers/encryption');
 
 const signale = require('signale');
 const mongoose = require('mongoose');
@@ -17,18 +18,27 @@ mongoose.connect(config.mongodb.dbURI, config.mongodb.setting)
         signale.success('*****Database Connection Successfull******');
         let gridData = getJsonFromPath(path.resolve(__dirname, "..", "data", "CrosswordData.json"));
         let wordData = getJsonFromPath(path.resolve(__dirname, "..", "data", "WordData.json"));
-        
-        let grid = await Grid.findOne({id: 0});
-        if(!grid){
-            await Grid.create({id: 0, data: JSON.stringify(gridData)});
-            await Word.insertMany(wordData);
+
+        try {
+            let grid = await Grid.findOne({ id: 0 });
+            if (!grid) {
+                await Grid.create({ id: 0, data: JSON.stringify(gridData) });
+                for (let i = 0; i < wordData.length; i++) {
+                    wordData[i].word = encryption.encrypt(wordData[i].word);
+                }
+                await Word.insertMany(wordData);
+            }
+
+            signale.success('*****Populated Database Successfully*****');
+            process.exit();
+
+        } catch (err) {
+            signale.error(err);
+            process.exit();
         }
 
-        signale.success('*****Populated Database Successfully*****');
-        process.exit();
-
     }).catch(err => {
-        signale.fatal(new Error(err));
-        signale.warn('Could not connect to Database. Exiting now...');
-        process.exit();
-    })
+            signale.fatal(new Error(err));
+            signale.warn('Could not connect to Database. Exiting now...');
+            process.exit();
+        })

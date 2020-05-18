@@ -13,5 +13,9 @@ module.exports = {
     imap: {
         host: "203.129.195.133",
         port: 143
+    },
+    encryption: {
+        key: "[ENCRYPTION KEY]",
+        iv: "[ENCRYPTION IV]"
     }
 };

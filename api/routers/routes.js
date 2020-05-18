@@ -22,6 +22,7 @@ router.post('/login',user.loginUser);
 // game
 router.get('/game',sessionChecker,game.renderGrid);
 router.post('/game',sessionChecker,user.saveGame);
+router.post('/check',sessionChecker,game.checkAnswer);
 
 // Completion Page
 router.get('/afterGame',sessionChecker,user.renderAfterGame);  // url isnt that great plis change
