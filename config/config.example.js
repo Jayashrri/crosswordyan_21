@@ -17,5 +17,10 @@ module.exports = {
     encryption: {
         key: "[ENCRYPTION KEY]",
         iv: "[ENCRYPTION IV]"
+    },
+    baseUrl: "http://localhost:8081/",
+    sendgrid: {
+        FromAddress:"noreply@pragyan.com",
+        apiKey:"[insert your sendgrid api key]"
     }
 };

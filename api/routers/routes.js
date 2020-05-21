@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const user = require('../controllers/user-controller');
 const game = require('../controllers/game-controller');
+const User = require('../models/User');
 
 // sessionChecker middlewares
 let sessionChecker = (req, res, next) => {
@@ -12,7 +13,22 @@ let sessionChecker = (req, res, next) => {
     }
   }
 
-
+let CheckValidURL = async(req,res,next) => {
+  try{
+    let uniq_id = req.params.id;
+    let requestedUser = await User.findOne({passwordResetId: uniq_id});
+    if(!requestedUser)
+    {
+       // redirecting to random url so it goes to notfoundpage
+       return res.redirect('/notfound');
+    }
+    next();
+  }
+  catch(err)
+  {
+     return res.status(500).jsonp({message: "Internal Server Error"});
+  } 
+}
 
 
 // login
@@ -31,6 +47,17 @@ router.get('/afterGame',sessionChecker,user.renderAfterGame);  // url isnt that 
 router.get('/leaderboard',sessionChecker,user.renderLeaderboard);
 
 // register
-// router.get('/regUser',user.regUser);
+router.post('/register',user.regUser);
+
+// verify email
+router.get('/verify',user.verifyEmail);
+
+// Reset Password Request Page
+router.get('/forgotpassword',user.renderForgotPasswordRequest);
+router.post('/forgotPasswordRequest',user.forgotPasswordRequest);
+
+// Reset Password Page
+router.get('/resetPassword/:id',CheckValidURL,user.renderResetPassword);
+router.post('/resetPasswordRequest/:id',CheckValidURL,user.changePassword);
 
 module.exports = router;
