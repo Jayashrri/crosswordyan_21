@@ -14,17 +14,21 @@
 </head>
 <body>
     <h1>Game page</h1> 
-  
-    <div class="game-board" id="game-board1"></div> 
-    <h1>HintsList</h1>    
-    <button class="game-button green" id="start-btn" onclick="buildMatrix('game-board1', cell, l, m);">start</button>
+    <div class="game-area">
+        <div class="game-board" id="game-board1"></div> 
+        <div class="hint-board" id="hint-board1"></div>
+    </div>    
+    <button class="game-button green" id="start-btn" onclick="buildMatrix('game-board1', cell, across, down, l, m, 'hint-board1');">start</button>
        
     <script>
         var l = <%-JSON.stringify(grid.length) %>;
         var m = <%-JSON.stringify(grid[0].length) %>;
+        var completed = <%-JSON.stringify(completed)%>;
         var words = <%-JSON.stringify(words)%>;
         var grid = <%-JSON.stringify(grid)%>;
         var cell = new Array(l);
+        var across = [];
+        var down = [];
         for(var r = 0; r < l; r++){
             cell[r] = new Array(m);
             for(var c = 0; c < m; c++){
@@ -42,20 +46,26 @@
             cell[r][c].start = 1;
             var length = words[i].length;
             var qno = words[i].number;
-            var orientation = words[i].orientation == "across" ? 1 : 2;
+            var orien = words[i].orientation == "across" ? 1 : 2;
+            if(orien == 1){
+              across.push({number: words[i].number, orien:1, hint: words[i].clue});
+            }
+            else{
+              down.push({number: words[i].number, orien:2 , hint: words[i].clue});
+            }
             for(var j = 0;j<length;j++ ){
-                if(orientation == 1){
-                   cell[r][c+j].state += orientation;
+                if(orien == 1){
+                   cell[r][c+j].state += orien;
                 }
                 else{
-                   cell[r+j][c].state += orientation;
+                   cell[r+j][c].state += orien;
                 }
             }
             for(var j = 0; j < length; j++){
-              if(cell[r][c].state==1 || (cell[r][c].state==3 && orientation==1)){
+              if(cell[r][c].state==1 || (cell[r][c].state==3 && orien==1)){
                 cell[r][c+j].Aqno = qno;
               }
-              else if(cell[r][c].state==2 || (cell[r][c].state==3 && orientation==2)){
+              else if(cell[r][c].state==2 || (cell[r][c].state==3 && orien==2)){
                   cell[r+j][c].Dqno = qno;
               }
             }

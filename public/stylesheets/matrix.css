@@ -72,7 +72,9 @@ body {
   top:2px;
   box-shadow: 0 4px 0 #348628, 0 6px 1px 1px rgba(0,0,0,.3), 0 8px 0 5px #2a6d20, 0 10px 0 5px #39822e, 0 13px 0 5px #1d4c16, 0 13px 1px 6px rgba(0,0,0,.3);
 }
-
+.completed{
+  background-color: #54d440 !important;
+}
 /* ************************CROSSWORD PANEL*************************************** */
 
 td{
@@ -100,6 +102,11 @@ td{
   font-weight: bold;
   text-transform: uppercase;
   color: #000;
+}
+
+.crossword-board__item:hover{
+  background-color: #5fcc49;
+  border: 1px solid #000;
 }
 .crossword-board__item:active, .crossword-board__item:focus {
   background: #5fcc49;
@@ -142,5 +149,37 @@ label {
   transform: translate(0, 4px) scale(.75);
 }
 
+
+
+/* ********************************HINT********************************************* */
+
+#hint-board1{
+  font-size: 1.0em;
+  position: relative;
+  left: 10%;
+  color: #000;
+  text-align: center;
+  display: inline-block;
+}
+
+
+.rowHint{
+  color: #000;
+  min-height: 15px;
+  margin: auto auto auto auto; 
+}
+#hint-table{
+  border-collapse: separate;
+  border-spacing: 15px;
+}
+
+.hint-cell-hover{
+  background-color: yellow;
+  border-radius : 4px;
+}
+
+.hint-cell{
+  border-radius: 5px;
+}
 
 
