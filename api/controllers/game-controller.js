@@ -10,12 +10,29 @@ exports.renderGrid = async (req, res) => {
         const gridId = 0;
         const user = await User.findOne({ username: req.session.user.name });
         const grid = await Grid.findOne({ id: gridId });
-        const wordSet = await Word.find({ gridId: gridId }).select('-gridId -word -__v');
+        const words = await Word.find({ gridId: gridId }).select('-gridId -__v');
+
+        let completed = [];
+        for (let i = 0; i < user.completed.length; i++) {
+            const completedWord = words.find(word => {
+                return word._id.equals(user.completed[i]);
+            });
+            completed.push({
+                _id: user.completed[i],
+                word: encryption.decrypt(completedWord.word)
+            });
+        }
+
+        const wordSet = words.map(word => {
+            word = word.toObject();
+            delete word.word;
+            return word;
+        });
 
         return res.render('Game', {
             grid: JSON.parse(grid.data),
             words: wordSet,
-            completed: user.completed
+            completed: completed
         });
 
     } catch (err) {
