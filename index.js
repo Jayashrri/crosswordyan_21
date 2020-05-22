@@ -28,6 +28,10 @@ let db = mongoose.connection;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.use(express.json({
+  type: ['application/json', 'text/plain']
+}));
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.set("view engine", "ejs");
 
