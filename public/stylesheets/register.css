@@ -1,11 +1,15 @@
 .container-outer {
-    background-color: #f8e76e;
+    background-color: #ffe18f;
+    border-radius: 8px;
 }
 
 .container-inner {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 249, 249);
     padding-top: 20px;
     padding-bottom: 20px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
 }
 
 .boxes {
@@ -14,14 +18,15 @@
 }
 
 body {
-    background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/binding_dark.png");
+    /* background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/binding_dark.png"); */
+    background-image: url(/assets/bg.png);
 }
 
 .inputEditText {
     width: 80%;
     height: 2.2em;
     font-size:1.2em;
-    background-color: #f2f2f2;
+    background-color: rgb(240, 235, 235);
     border-style:none;
     border-radius:5px;
     padding-left: 20px;
@@ -60,7 +65,7 @@ body {
 #responseText {
   width: 90%;
   font-size: 20px;
-  background-color: white;
+  background-color: rgb(255, 249, 249);
   border-radius: 8px;
   vertical-align: middle;
   margin: auto;
