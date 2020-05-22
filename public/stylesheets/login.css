@@ -39,7 +39,7 @@
 
 body {
     z-index: 20;
-    background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/binding_dark.png");
+    background-image: url("/assets/bg.png");
 }
 
 .text-login {

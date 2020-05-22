@@ -20,7 +20,8 @@ let CheckValidURL = async(req,res,next) => {
     if(!requestedUser)
     {
        // redirecting to random url so it goes to notfoundpage
-       return res.redirect('/notfound');
+       if(req.method === "GET") return res.render('NotFound',{message: "Token Expired or Invalid. Send a new Request"});
+       return res.status(500).jsonp({message: "Token Expired or Invalid. Send a new Request"});
     }
     next();
   }
@@ -57,7 +58,7 @@ router.get('/forgotpassword',user.renderForgotPasswordRequest);
 router.post('/forgotPasswordRequest',user.forgotPasswordRequest);
 
 // Reset Password Page
-router.get('/resetPassword/:id',CheckValidURL,user.renderResetPassword);
+router.get('/resetPassword/:id',user.renderResetPassword);
 router.post('/resetPasswordRequest/:id',CheckValidURL,user.changePassword);
 
 module.exports = router;
