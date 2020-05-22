@@ -9,7 +9,7 @@
 </head>
 <body>
     
-    <h1>LEADERBOARD</h1>
+    <h2>LEADERBOARD</h2>
 
     <div class="game-leaderboard-class" id="game-leaderboard-id" style="overflow: hidden;"></div>
     <div class="page-number-class" id="page-number-id"></div>
@@ -23,10 +23,10 @@
         var listPeople = new Array(n);
         
         for(let i=1; i<=n; i++) {
-        listPeople[i-1]= [i, users[i-1].username, users[i-1].score];
+            listPeople[i-1]= [i, users[i-1].username, users[i-1].score];
         }
         
-        buildPages('page-number-id', n, m, 'game-leaderboard-id', listPeople);
+        buildLeaderboard('game-leaderboard-id', listPeople, n, m, 0, 10,'page-number-id');
 
     </script>
 

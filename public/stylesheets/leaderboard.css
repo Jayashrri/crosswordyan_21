@@ -1,10 +1,11 @@
-h1 {
+h2 {
     color: #000000;
     background-color: rgb(74, 106, 175);
     border: 4px solid rgb(27, 16, 122);
-    width: 60%;
+    width: 70%;
     text-align: center;
-    margin-left: 20%;
+    margin-right: 15%;
+    margin-left: 15%;
     margin-bottom: 3%;
     padding-top: 0.5%;
     border-radius: 20px;
@@ -39,4 +40,38 @@ td {
 tr:hover{
     text-shadow: 0 0 10px rgb(230,230,255);
     color: aliceblue;
+}
+
+.pageNumberBox {
+    width: 30px; 
+    height: 30px; 
+    background-color: #686565; 
+    color: #FFFFFF; 
+    vertical-align: middle; 
+    text-align: center; 
+    margin-left: 10px; 
+    line-height: 30px; 
+    cursor: pointer;
+}
+
+.pageNumberBox:hover {
+    width: 30px; 
+    height: 30px; 
+    background-color: #000000; 
+    color: #FFFFFF; 
+    vertical-align: middle; 
+    text-align: center; 
+    margin-left: 10px; 
+    line-height: 30px; 
+    cursor: pointer;
+}
+
+
+.paginationDots {
+    width: 30px; 
+    height: 30px; 
+    color: #000000; 
+    text-align: center; 
+    margin-left: 10px; 
+    line-height: 45px;
 }
