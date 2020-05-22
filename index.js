@@ -45,7 +45,7 @@ app.use(session({
 // //sessionChecker middlewares
 let sessionChecker = (req, res, next) => {
   if (!req.session.user) {
-    res.redirect('/user/login')
+    res.redirect('/login')
   } else {
     next()
   }
@@ -74,13 +74,25 @@ app.get('/register',loggedIn,(req,res) => {
 })
 
 app.get("/",(req,res) => {
-   res.render("Home");
+  let loggedIn = false;
+  if(req.session.user){
+    loggedIn = true;
+  }
+   res.render("Home",{loggedIn});
+})
+
+app.get("/rules",(req,res) => {
+  let loggedIn = false;
+  if(req.session.user){
+    loggedIn = true;
+  }
+   res.render("Rules",{loggedIn});
 })
 
 
 app.get('/logout', sessionChecker, (req, res) => {
   req.session.destroy(err => {
-    if (err) {
+    if (err) {      
       return next(err)
     }
     return res.redirect('/')

@@ -10,18 +10,18 @@
 			crossorigin="anonymous"
 		/>
 		<link rel="stylesheet" href="/stylesheets/home.css" />
-		<title>Corsswordyan 21</title>
+		<title>Rules</title>
 		<style>
-			     .require-login {
-			       <% if (!loggedIn) { %>
+			.require-login {
+			<% if (!loggedIn) { %>
 			display: none;
-			     <% } %>
-			     }
-			     .hide-if-loggedin {
-			       <% if (loggedIn) { %>
+			<% } %>
+			}
+			.hide-if-loggedin {
+			<% if (loggedIn) { %>
 			display: none;
-			     <% } %>
-			     }
+			<% } %>
+			}
 		</style>
 	</head>
 	<body>
@@ -46,12 +46,17 @@
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item">
 						<a class="nav-link require-login" href="/user/game">Game</a>
-          </li>
-          <li class="nav-item">
-						<a class="nav-link" href="/rules">Rules</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link require-login" href="/user/leaderboard">Leaderboard</a>
+						<a class="nav-link" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="/rules">Rules</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link require-login" href="/user/leaderboard"
+							>Leaderboard</a
+						>
 					</li>
 				</ul>
 				<ul class="navbar-nav ml-auto hide-if-loggedin">
@@ -66,8 +71,8 @@
 					<li class="nav-item">
 						<a class="nav-link" href="/register">Register</a>
 					</li>
-        </ul>
-        <ul class="navbar-nav ml-auto require-login">
+				</ul>
+				<ul class="navbar-nav ml-auto require-login">
 					<li class="nav-item">
 						<a
 							type="button"
@@ -76,12 +81,12 @@
 							>Logout</a
 						>
 					</li>
-        </ul>
+				</ul>
 			</div>
 		</nav>
-		<div class="container">
-			<div class="row h-100 align-items-center">
-				<h1 class="mx-auto title">Crosswordyan 21</h1>
+		<div class="container h-100">
+			<div class="row h-100 align-items-start">
+				<h1 class="mx-auto" style="margin-top: 86px;">Rules</h1>
 			</div>
 		</div>
 		<script

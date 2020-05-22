@@ -90,8 +90,9 @@ exports.loginUser = async (req,res) => {
     }
 }
 
-exports.renderAfterGame = (req,res) => {
-    res.render('AfterGame');
+exports.renderAfterGame = async (req,res) => {
+    const user = await User.findOne({ username: req.session.user.name });
+    res.render('AfterGame',{score: user.score});
 }
 
 exports.saveGame = (req,res) => {
