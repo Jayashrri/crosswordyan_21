@@ -1,3 +1,11 @@
+@font-face {
+font-family: "Nexa Bold";
+src: url("/assets/fonts/Nexa Bold.otf");
+}
+@font-face {
+font-family: "Nexa Light";
+src: url("/assets/fonts/Nexa Light.otf");
+}
 h2 {
     color: #4d0000;
     background-color: rgb(223, 135, 128);

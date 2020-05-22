@@ -1,3 +1,11 @@
+@font-face {
+font-family: "Nexa Bold";
+src: url("/assets/fonts/Nexa Bold.otf");
+}
+@font-face {
+font-family: "Nexa Light";
+src: url("/assets/fonts/Nexa Light.otf");
+}
 .login-container {
     border-radius: 30px;
     padding-bottom: 0%;

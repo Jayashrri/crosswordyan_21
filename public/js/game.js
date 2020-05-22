@@ -12,7 +12,7 @@ var resetHover = (targets) => {
   targetArray.forEach(element => {
     element = element.slice(1);
     var x = document.getElementById(element);
-    x.className = "";
+    x.className = "hint-cell";
   });
 }
 

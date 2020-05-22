@@ -50,6 +50,7 @@ async function onRegisterClicked() {
         responseBox.innerHTML="";
         var email=document.getElementById("etEmail").value;
         var password=document.getElementById("etPassword").value;
+        var confirmPassword=document.getElementById("etConfirmPassword").value;
         var username=document.getElementById("etUname").value;
         var mobileNumber=document.getElementById("etMobileNum").value;
         
@@ -59,6 +60,7 @@ async function onRegisterClicked() {
                 email: email,
                 password: password,
                 username: username,
+                confirmPassword: confirmPassword,
                 mobileNumber: mobileNumber
             }),
             headers: {

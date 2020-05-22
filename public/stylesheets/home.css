@@ -1,5 +1,11 @@
-@import url('/public/assets/fonts/Nexa\ Bold.otf');
-@import url('/public/assets/fonts/Nexa\ Light.otf');
+@font-face {
+font-family: "Nexa Bold";
+src: url("/assets/fonts/Nexa Bold.otf");
+}
+@font-face {
+font-family: "Nexa Light";
+src: url("/assets/fonts/Nexa Light.otf");
+}
 body {
 	background-color: #264653;
 	text-align: center;
@@ -13,7 +19,7 @@ body {
 
 a {
 	color: #000;
-	font-family: 'Nexa Light';
+	font-family: 'Nexa Bold';
 }
 
 
