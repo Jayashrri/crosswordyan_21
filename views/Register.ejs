@@ -3,16 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/register.css" />
     <title>register</title>
 </head>
 <body>
-    <form action="/user/register" method="post">
-        <input type="text" name="email" placeholder="Email">
-        <input type="text" name="username" placeholder="Username">
-        <input type="text" name="mobileNumber" placeholder="Mobile Number">
-        <input type="password" name="password" placeholder="Password">
-        <input type="password" name="confirmPassword" placeholder="Confirm Password">
-        <input type="submit" value="Register">
-    </form>
+
+    <script>
+        var screenWidth = window.innerWidth;
+        var screenHeight = window.innerHeight;
+        var paddingVertical = screenHeight/2-300;
+        document.body.style.paddingTop=paddingVertical+'px';
+        document.body.style.paddingBottom=paddingVertical+'px';
+        document.body.style.textAlign='center';
+        if(screenWidth <= 880){
+            document.body.style.paddingLeft='5%';
+            document.body.style.paddingRight='5%';
+        } else {
+            document.body.style.paddingLeft='35%';
+            document.body.style.paddingRight='35%';
+        }    
+    </script>
+
+    <div class="container-outer">
+        <div style="text-align: left; padding-top: 1px; margin-left: 20px;">
+        <h1 style="margin-BOTTOM: 0;">Sign Up</h1>
+        <p style="margin-TOP: 0; padding-bottom: 1px;">Fill the form below to sign up</p>
+        </div>
+    <div class="container-inner">
+        <div id="et1" class="boxes" style="margin-top: 20px;"><input class="inputEditText" id="etEmail" type="text" name="email" placeholder="Email"></div>
+        <div id="et2" class="boxes"><input class="inputEditText" id="etUname" type="text" name="username" value="" placeholder="Username"></div>
+        <div id="et3" class="boxes"><input class="inputEditText" id="etMobileNum" type="text" name="mobileNumber" value="" placeholder="Mobile Number"></div>
+        <div id="et4" class="boxes"><input class="inputEditText" id="etPassword" type="password" name="password" value="" placeholder="Password"></div>
+        <div id="et5" class="boxes"><input class="inputEditText" id="etConfirmPassword" type="password" name="confirmPassword" value="" placeholder="Confirm Password"></div>
+        <div id="et6" class="registerButton"><input class="Button" type="submit" value="Register" onclick="onRegisterClicked()"></div>
+        <div id="responseText">  </div>
+
+</div>
+</div>
+
+<script>
+async function onRegisterClicked() {
+    try{
+        
+        var responseBox=document.getElementById("responseText");
+        responseBox.innerHTML="";
+        var email=document.getElementById("etEmail").value;
+        var password=document.getElementById("etPassword").value;
+        var username=document.getElementById("etUname").value;
+        var mobileNumber=document.getElementById("etMobileNum").value;
+        
+        var res=await fetch(`/user/register`,{
+            method:"POST",
+            body:JSON.stringify({
+                email: email,
+                password: password,
+                username: username,
+                mobileNumber: mobileNumber
+            }),
+            headers: {
+                'Content-Type':'application/json'
+            }
+        })
+        var resp = await res.json();
+        console.log(resp.message);
+        console.log(res.status);
+        } catch(err) {
+            console.log(err);
+        }
+        
+        responseBox.innerHTML+=resp.message;
+        
+        if(res.status==400) {
+            responseBox.style.backgroundColor='#EF7070';
+            responseBox.style.color='#C30000';
+        } else if(res.status==200) {
+            responseBox.style.backgroundColor='#3FE845';
+            responseBox.style.color='#01C107';
+        } else {
+            responseBox.style.backgroundColor='#EF7070';
+            responseBox.style.color='#C30000';
+        }
+        
+}
+</script>
+
 </body>
 </html>
