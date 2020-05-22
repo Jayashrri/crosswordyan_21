@@ -106,6 +106,7 @@ exports.checkAnswer = async (req, res) => {
                     && user.completed.indexOf(answers[j]._id) == -1) {
                     user.completed.push(answers[j]._id);
                     changed[words[i].orientation] = true;
+                    user.score = user.score + 10;
                 }
             }
         }
@@ -115,6 +116,24 @@ exports.checkAnswer = async (req, res) => {
             success: true,
             changed: changed,
             completed: user.completed
+        });
+
+    } catch (err) {
+        signale.error(err);
+        return res.status(500).send({
+            success: false,
+            message: err
+        });
+    }
+}
+
+exports.getScore = async (req, res) => {
+    try {
+        const user = await User.findOne({ username: req.session.user.name });
+
+        return res.status(200).send({
+            success: true,
+            score: user.score
         });
 
     } catch (err) {

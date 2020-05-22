@@ -40,6 +40,7 @@ router.post('/login',user.loginUser);
 router.get('/game',sessionChecker,game.renderGrid);
 router.post('/game',sessionChecker,user.saveGame);
 router.post('/check',sessionChecker,game.checkAnswer);
+router.get('/score', sessionChecker, game.getScore);
 
 // Completion Page
 router.get('/afterGame',sessionChecker,user.renderAfterGame);  // url isnt that great plis change
