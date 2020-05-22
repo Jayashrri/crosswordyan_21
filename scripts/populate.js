@@ -1,5 +1,4 @@
 const Grid = require('../api/models/Grid');
-const User = require('../api/models/User')
 const Word = require('../api/models/Word');
 const config = require('../config/config');
 const encryption = require('../api/helpers/encryption');
@@ -29,13 +28,6 @@ mongoose.connect(config.mongodb.dbURI, config.mongodb.setting)
                 }
                 await Word.insertMany(wordData);
             }
-
-            const user = await User.findOne({username:""/*your username*/});
-            if(!user){
-                user.score = 10;
-                await user.save()
-            }
-
             signale.success('*****Populated Database Successfully*****');
             process.exit();
 
