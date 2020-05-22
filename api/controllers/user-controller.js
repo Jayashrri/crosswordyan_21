@@ -65,7 +65,6 @@ loginHelper = async (email, password, cb) => {
 
 
 exports.loginUser = async (req,res) => {
-    
     if(req.body.email && req.body.password)
     {
         try{
@@ -77,7 +76,7 @@ exports.loginUser = async (req,res) => {
             req.session.user = {
                 name: loginResult.username
             }
-            return res.redirect('/user/game');
+            return res.status(200).jsonp({message : "login successful"});
         }
         catch(err)
         {
