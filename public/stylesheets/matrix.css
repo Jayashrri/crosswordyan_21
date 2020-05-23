@@ -133,7 +133,14 @@ td{
   /* z-index: 50; */
 }
 
+table{
+  border-spacing: 1px;
+  border-collapse: separate;
+}
 
+#game-board1 > table{
+  background-color: white;
+}
 
 /* ******************************LABEL******************************************** */
 .float-container {
