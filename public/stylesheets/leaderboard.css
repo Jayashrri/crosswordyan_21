@@ -23,6 +23,7 @@ body {
     background-image: url(/assets/bg.png);
     margin: 0; 
     padding-top: 0.5%;
+    font-family: "Nexa Bold";
 }
 
 
@@ -93,7 +94,7 @@ tr:hover{
 
 a {
 	color: #000;
-	font-family: 'Nexa Light';
+	font-family: 'Nexa Bold';
 }
 
 

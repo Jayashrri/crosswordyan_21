@@ -176,7 +176,7 @@ label {
   position: relative;
   left: 10%;
   color: #000;
-  text-align: center;
+  text-align: left;
   display: inline-block;
 }
 
@@ -189,10 +189,31 @@ label {
 #hint-table{
   border-collapse: separate;
   border-spacing: 15px;
+  max-width: 70vw;
+  font-size: 0.8em;
+  background: rgba(0,0,0,0.7);
+  border-radius: 10px;
+  color:white;
+}
+
+#hint-table th{
+  text-align: center;
+  font-family: "Nexa Bold";
+}
+
+@media screen and (max-width<768px){
+  #hint-table{
+    max-width: 95vw;
+  }
+}
+
+#hint-table td{
+  width: 50%;
+  color: white;
 }
 
 .hint-cell-hover{
-  background-color: aliceblue;
+  background-color: sandybrown;
   border-radius : 5px;
   padding: 3px;
   font-size: 1.2em;

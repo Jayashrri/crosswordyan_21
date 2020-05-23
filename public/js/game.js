@@ -117,7 +117,7 @@ var buildMatrix = (parentID, cell, across, down, n, m, hintID) => {
       $("#hint-board1").css("left", "unset");
    }
    else{
-      width = width*0.5; 
+      width = width*0.4; 
       $("#game-board1").css("padding-left", "10px");
       $("#hint-board1").css("left", "unset");
       // $(".game-area").css("display", "flex");
@@ -202,7 +202,8 @@ var buildMatrix = (parentID, cell, across, down, n, m, hintID) => {
     var row = document.getElementById('rowHint-'+(i+1));
     var cell = row.insertCell(0);
     cell.className = "hint-cell";
-    cell.insertAdjacentHTML("beforeend", "<div class='hint-cell' id='A"+across[i].number+"'>"+across[i].hint+"</div>"); 
+    console.log(across[i]);''
+    cell.insertAdjacentHTML("beforeend", "<div class='hint-cell' id='A"+across[i].number+"'>"+across[i].number+". "+across[i].hint+"</div>"); 
     j++;
    }
    for(;j<down.length; j++){
@@ -215,7 +216,7 @@ var buildMatrix = (parentID, cell, across, down, n, m, hintID) => {
     var row = document.getElementById('rowHint-'+(i+1));
     var cell = row.insertCell(1);
     cell.className = "hint-cell";
-    cell.insertAdjacentHTML("beforeend", "<div class='hint-cell' id='D"+down[i].number+"'>"+down[i].hint+"</div>"); 
+    cell.insertAdjacentHTML("beforeend", "<div class='hint-cell' id='D"+down[i].number+"'>"+down[i].number+". "+down[i].hint+"</div>"); 
    }
    $(".crossword-board__item").mouseenter(function () {
     setHover(this.dataset.target);
