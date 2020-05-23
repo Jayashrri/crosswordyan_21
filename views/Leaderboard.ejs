@@ -15,53 +15,22 @@
 </head>
 <body>
 
-    <nav
-			class="navbar navbar-expand-lg navbar-light"
-			style="background-color: rgba(0, 0, 0, 0);"
-		>
-      <a class="navbar-brand" href="/">
-        <img src="/assets/homepage.png" class="d-inline-block align-top"/>
-      </a>
-			<button
-				class="navbar-toggler"
-				type="button"
-				data-toggle="collapse"
-				data-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent"
-				aria-expanded="false"
-				aria-label="Toggle navigation"
-			>
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-collapse align-items-center" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="/user/game">Game</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/rules">Rules</a>
-					</li>
-					
-        </ul>
-        <ul class="navbar-nav ml-auto align-items-center">
-          
-          <li class="nav-item">
-						<a
-							type="button"
-							class="nav-link"
-							href="/logout"
-							>Logout</a
-						>
-          </li>
-          <li>
-            <img src="/assets/main_logo_21.png" class="ml-3 logo"/>
-          </li>
-        </ul>
-			</div>
-		</nav>
+    <div id="topbar">
+        <a href="/" class="topbar-icons">
+          <img src="/assets/home_icon.png" class="d-inline-block align-top" />
+        </a>
+        <div style="margin-left:auto; display: flex; padding: 0px; margin-top:20px;">
+            <img src="/assets/main_logo_21.png" height="60"/>
+        </div>
+      </div>
+      <div class="title-icon">
+        <img src="/assets/title.png" alt="">
+      </div>
+      <footer>
+        Made with &#10084; by <a href="https://delta.nitt.edu">Delta Force</a>
+      </footer>
     
-    <h2>LEADERBOARD</h2>
+    <h2>Leaderboard</h2>
 
     <div class="game-leaderboard-class" id="game-leaderboard-id" style="overflow: hidden;"></div>
     <div class="page-number-class" id="page-number-id"></div>

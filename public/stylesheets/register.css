@@ -9,6 +9,7 @@
 .container-outer {
     background-color: #ffe18f;
     border-radius: 8px;
+    font-family: "Nexa Light";
 }
 
 .container-inner {
@@ -27,7 +28,7 @@
 
 body {
     /* background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/binding_dark.png"); */
-    background-image: url(/assets/bg.png);
+    background-image: url(/assets/bg3.png);
 }
 
 .inputEditText {

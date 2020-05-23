@@ -29,41 +29,27 @@
   </style>
 </head>
 
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(0, 0, 0, 0);">
-    <a class="navbar-brand" href="/">
-      <img src="/assets/homepage.png" class="d-inline-block align-top" />
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse align-items-center" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link require-login" href="/user/game">Game</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link require-login" href="/user/leaderboard">Leaderboard</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav ml-auto align-items-center">
-        <li class="nav-item hide-if-loggedin">
-          <a type="button" class="nav-link" href="/login">Login</a>
-        </li>
-        <li class="nav-item hide-if-loggedin">
-          <a class="nav-link" href="/register">Register</a>
-        </li>
-        <li class="nav-item require-login">
-          <a type="button" class="nav-link" href="/logout">Logout</a>
-        </li>
-        <li>
-          <img src="/assets/main_logo_21.png" class="ml-3 logo" />
-        </li>
-      </ul>
+<body style="background: url('assets/bg.png')">
+    <div id="topbar">
+      <a href="/" class="topbar-icons">
+        <img src="/assets/home_icon.png" class="d-inline-block align-top" />
+      </a>
+      <div style="margin-left:auto; display: flex; padding: 0px; margin-top:20px;">
+          <div id="my-navbar" style="margin-right: 30px;">
+              <a class="nav-link require-login" href="/user/game">Game</a>
+              <a type="button" class="nav-link hide-if-loggedin" href="/login">Login</a>
+              <a class="nav-link hide-if-loggedin" href="/register">Register</a>
+              <a type="button" class="nav-link require-login" href="/logout">Logout</a>
+            </div>
+          <img src="/assets/main_logo_21.png" height="60"/>
+      </div>
     </div>
-  </nav>
+    <div class="title-icon">
+      <img src="/assets/title.png" alt="">
+    </div>
+    <footer>
+      Made with &#10084; by <a href="https://delta.nitt.edu">Delta Force</a>
+    </footer>
   <div class="content">
     <h1>Rules</h1>
     <p>
@@ -75,9 +61,6 @@
     <p>
       3. The top three participants on the final leaderboard shall be eligible to receive prizes.
     </p> 
-  </div>
-  <div class="container-fluid">
-    <img src="/assets/title.png" class="bottom-right" />
   </div>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

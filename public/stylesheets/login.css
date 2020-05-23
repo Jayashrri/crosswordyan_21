@@ -11,6 +11,7 @@ src: url("/assets/fonts/Nexa Light.otf");
     padding-bottom: 0%;
     padding-top: 1.5%;
     background-color: #14edaa;
+    font-family: "Nexa Light";
 }
 
 .loginWidgets {

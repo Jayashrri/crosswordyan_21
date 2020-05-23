@@ -13,12 +13,20 @@
     <link rel="stylesheet" href="/stylesheets/matrix.css" />
 </head>
 <body>
-    <h1>Game page</h1> 
+    <div id="topbar">
+        <a href="/" class="topbar-icons">
+          <img src="/assets/home_icon.png" class="d-inline-block align-top" />
+        </a>
+        <div style="margin-left:auto; display: flex; padding: 0px; margin-top:20px;">
+            <img src="/assets/main_logo_21.png" height="60"/>
+        </div>
+      </div>
     <div class="game-area">
         <div class="game-board" id="game-board1"></div> 
         <div class="hint-board" id="hint-board1"></div>
-    </div>    
-    <button class="game-button green" id="start-btn" onclick="buildMatrix('game-board1', cell, across, down, l, m, 'hint-board1');">start</button>
+    </div>
+    <div class="game-btn" id="start-btn" onclick="buildMatrix('game-board1', cell, across, down, l, m, 'hint-board1');"></div>
+    <!-- <button class="game-button green" id="start-btn" onclick="buildMatrix('game-board1', cell, across, down, l, m, 'hint-board1');">start</button> -->
        
     <script>
         // function createArray(length) {

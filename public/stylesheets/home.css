@@ -6,20 +6,96 @@ src: url("/assets/fonts/Nexa Bold.otf");
 font-family: "Nexa Light";
 src: url("/assets/fonts/Nexa Light.otf");
 }
+
 body {
 	background-color: #264653;
 	text-align: center;
-	background-image: url(/assets/bg.png);
+	background-image: url(/assets/bg3.png);
+	background-size: cover; 
 }
+
+/* Addition by shake */
+
+   #topbar{
+	display: flex;
+	width: 100%;
+	padding: 30px;
+	/* align-items: center; */
+   }
+   .topbar-icons{
+		display: block;
+	}
+	.topbar-icons>img{
+		height: 100px;
+	}
+   #my-navbar{
+	 display: flex;
+	 margin-left: auto;
+	 height: fit-content;
+   }
+   #mobile-navbar{
+	 position: absolute;
+	 display: none;
+	 bottom: 10vh;
+	 width: 100%;
+	 margin: 0 auto;
+   }
+   footer{
+	 position: fixed;
+	 bottom:0;
+	 width: 100%;
+	 text-align: center;
+	 font-family: 'Nexa Light';
+	 background: #72c7a2;
+	 padding: 5px;
+	 color: white;
+   }
+   footer>a{
+	 text-decoration: dotted;
+	 color: white;
+   }
+   @media only screen and (max-width: 768px){
+	 #my-navbar{
+	   display: none;
+	 }
+	 #mobile-navbar{
+	   display: block;
+	 }
+	 #topbar{
+		 padding: 10px;
+	 }
+	 .title-icon{
+		display: none;
+	}
+   }
+
+   .title-icon{
+		position: fixed;
+		right: 0;
+		bottom: 3vh;
+		height: 150px;
+		padding: 20px;
+	}
+
+	.title-icon>img{
+		height: 100%;
+	}
+
+   /* Addition by shake */
 
 .navbar {
 	position: absolute;
 	width: 100%;
 }
 
-a {
-	color: #000;
+.nav-link {
+	color: #000 !important;
 	font-family: 'Nexa Bold';
+	font-size: 1.4em;
+}
+
+.nav-link:hover{
+	transform: scale(1.1);
 }
 
 
@@ -45,15 +121,29 @@ head {
 
 .content {
 	font-family: 'Nexa Light';
-	padding-top: 120px;
-	padding-bottom: 20px;
-	background-clip: content-box;
-	background-color: rgb(255, 255, 255, 0.7);
+	width: 70vw;
+    margin: 0 auto;
+	background: #72c7a2;
+	padding: 50px;
+	text-align: justify;
+	font-size: 1.4em;
 }
 
-@media screen and (max-width: 600px){
+.content > h1{
+	font-family: "Nexa Bold";
+	text-align: center;
+}
+
+@media screen and (max-width: 768px){
 	img {
 		max-width: 300px !important;
+	}
+	body{
+		background-image: url(/assets/bgmobile.png);
+	}
+	.content{
+		width: 90vw;
+		font-size: 1.1em;
 	}
 }
 

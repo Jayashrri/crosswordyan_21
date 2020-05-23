@@ -8,14 +8,13 @@ src: url("/assets/fonts/Nexa Light.otf");
 }
 h2 {
     color: #4d0000;
-    background-color: rgb(223, 135, 128);
-    border: 4px solid rgb(163, 24, 0);
-    width: 70%;
     text-align: center;
-    margin-right: 15%;
+    color: #5ea586 !important;
+    font-size: 3em !important;
+    /* margin-right: 15%;
     margin-left: 15%;
     padding-top: 0.5%;
-    border-radius: 10px;
+    border-radius: 10px; */
     font-family: "Nexa Bold" !important;
 }
 
@@ -36,10 +35,15 @@ body {
     margin: 40px auto;
 }
 
+table{
+    font-family: "Nexa Light";
+    font-size: 1.2em;
+}
+
 tr {
     /* background: linear-gradient(to top,rgb(165, 187, 216) 0%, rgb(105, 157, 224) 100%); */
     /* background: linear-gradient(to top,rgb(216, 165, 165) 0%, rgb(224, 105, 105) 100%); */
-    background: rgba(0,0,0,0.8);
+    background: #72c7a2e8;
     text-align:left;
     cursor: default;
     margin-top: 20px;
@@ -108,3 +112,69 @@ a {
     }
 }
 
+
+
+#topbar{
+	display: flex;
+	width: 100%;
+	padding: 30px;
+	/* align-items: center; */
+   }
+   .topbar-icons{
+		display: block;
+	}
+	.topbar-icons>img{
+		height: 100px;
+	}
+   #my-navbar{
+	 display: flex;
+	 margin-left: auto;
+	 height: fit-content;
+   }
+   #mobile-navbar{
+	 position: absolute;
+	 display: none;
+	 bottom: 10vh;
+	 width: 100%;
+	 margin: 0 auto;
+   }
+   footer{
+	 position: fixed;
+	 bottom:0;
+	 width: 100%;
+	 text-align: center;
+	 font-family: 'Nexa Light';
+	 background: #72c7a2;
+	 padding: 5px;
+	 color: white;
+   }
+   footer>a{
+	 text-decoration: dotted;
+	 color: white;
+   }
+   @media only screen and (max-width: 768px){
+	 #my-navbar{
+	   display: none;
+	 }
+	 #mobile-navbar{
+	   display: block;
+     }
+     #topbar{
+        padding: 10px;
+    }
+    .title-icon{
+        display: none;
+    }
+   }
+
+   .title-icon{
+        position: fixed;
+        right: 0;
+        bottom: 3vh;
+        height: 150px;
+        padding: 20px;
+    }
+
+    .title-icon>img{
+        height: 100%;
+    }
