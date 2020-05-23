@@ -119,7 +119,8 @@ var buildMatrix = (parentID, cell, across, down, n, m, hintID) => {
    else{
       width = width*0.5; 
       $("#game-board1").css("padding-left", "10px");
-      $(".game-area").css("display", "flex");
+      $("#hint-board1").css("left", "unset");
+      // $(".game-area").css("display", "flex");
    }
    height = width;
    width = width/m;
@@ -161,6 +162,7 @@ var buildMatrix = (parentID, cell, across, down, n, m, hintID) => {
       }
       tableBody.appendChild(row);
    }
+   table.setAttribute("style","margin: 0 auto;")
    table.appendChild(tableBody);
    parent.appendChild(table); 
  
