@@ -42,3 +42,18 @@ head {
 	font-family: 'Nexa Light'; 
 	margin-bottom: 0 !important;
 }
+
+@media screen and (max-width: 600px){
+	img {
+		max-width: 300px !important;
+	}
+}
+
+@media screen and (max-width: 991px){
+	.logo {
+		display: none;
+	}
+	img {
+		max-width: 400px;
+	}
+}
