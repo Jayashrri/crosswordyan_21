@@ -177,9 +177,6 @@ exports.regUser = async(req,res) => {
        if(registerResult instanceof utils.CustomError ){
         return res.status(400).jsonp({ message: registerResult.message });
        }
-       req.session.user = {
-        name: registerResult.username   
-       }
        return res.status(200).jsonp({message: "Registration Successful! , An email has been sent to your email id for verfication"});
     } 
     catch(err)
