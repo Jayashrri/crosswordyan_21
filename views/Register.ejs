@@ -48,6 +48,7 @@ async function onRegisterClicked() {
         
         var responseBox=document.getElementById("responseText");
         responseBox.innerHTML="";
+        responseBox.style.backgroundColor='#141421';
         var email=document.getElementById("etEmail").value;
         var password=document.getElementById("etPassword").value;
         var confirmPassword=document.getElementById("etConfirmPassword").value;
@@ -80,8 +81,8 @@ async function onRegisterClicked() {
             responseBox.style.backgroundColor='#EF7070';
             responseBox.style.color='#C30000';
         } else if(res.status==200) {
-            responseBox.style.backgroundColor='#3FE845';
-            responseBox.style.color='#01C107';
+            responseBox.style.backgroundColor='#99ff9d';
+            responseBox.style.color='#00731f';
         } else {
             responseBox.style.backgroundColor='#EF7070';
             responseBox.style.color='#C30000';
