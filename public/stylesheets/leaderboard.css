@@ -15,7 +15,8 @@ h2 {
     margin-right: 15%;
     margin-left: 15%;
     padding-top: 0.5%;
-    border-radius: 20px;
+    border-radius: 10px;
+    font-family: "Nexa Bold" !important;
 }
 
 body {
@@ -37,15 +38,18 @@ body {
 
 tr {
     /* background: linear-gradient(to top,rgb(165, 187, 216) 0%, rgb(105, 157, 224) 100%); */
-    background: linear-gradient(to top,rgb(216, 165, 165) 0%, rgb(224, 105, 105) 100%);
+    /* background: linear-gradient(to top,rgb(216, 165, 165) 0%, rgb(224, 105, 105) 100%); */
+    background: rgba(0,0,0,0.8);
     text-align:left;
     cursor: default;
     margin-top: 20px;
+    color: white;
 }
 
 td {
     text-align:left;
     padding-left: 1.5em;
+    border-radius: 0 !important;
 } 
 
 tr:hover{
