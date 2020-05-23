@@ -154,8 +154,18 @@ var buildMatrix = (parentID, cell, across, down, n, m, hintID) => {
            td.insertAdjacentHTML('beforeend', '<div class="floatContainer"><label for="'+divId+'">'+cell[r-1][c-1].Dqno+'</label><input data-target="'+ number +'" oninput="evalGrid(this.id, '+n+', '+m+')" id="'+divId+'" class="crossword-board__item" type="text" minlength="1" maxlength="1" required="required" value="" style="width: '+width+'px; height: '+height+'px;"></div>');
          }
          else {
-           var number = "#D"+cell[r-1][c-1].Dqno+",#A"+cell[r-1][c-1].Aqno;
-           td.insertAdjacentHTML('beforeend', '<div class="floatContainer"><label for="'+divId+'">'+cell[r-1][c-1].Aqno+'</label><input data-target="'+ number +'" oninput="evalGrid(this.id, '+n+', '+m+')" id="'+divId+'" class="crossword-board__item" type="text" minlength="1" maxlength="1" required="required" value="" style="width: '+width+'px; height: '+height+'px;"></div>');
+           if(cell[r-1][c-1].start == 1){
+            var number = "#D"+cell[r-1][c-1].Dqno+",#A"+cell[r-1][c-1].Aqno;
+            td.insertAdjacentHTML('beforeend', '<div class="floatContainer"><label for="'+divId+'">'+cell[r-1][c-1].Aqno+'</label><input data-target="'+ number +'" oninput="evalGrid(this.id, '+n+', '+m+')" id="'+divId+'" class="crossword-board__item" type="text" minlength="1" maxlength="1" required="required" value="" style="width: '+width+'px; height: '+height+'px;"></div>');  
+           }
+           else if(cell[r-1][c-1].start == 2){
+            var number = "#D"+cell[r-1][c-1].Dqno+",#A"+cell[r-1][c-1].Aqno;
+           td.insertAdjacentHTML('beforeend', '<div class="floatContainer"><label for="'+divId+'">'+cell[r-1][c-1].Dqno+'</label><input data-target="'+ number +'" oninput="evalGrid(this.id, '+n+', '+m+')" id="'+divId+'" class="crossword-board__item" type="text" minlength="1" maxlength="1" required="required" value="" style="width: '+width+'px; height: '+height+'px;"></div>');
+           }
+           else{
+            var number = "#D"+cell[r-1][c-1].Dqno+",#A"+cell[r-1][c-1].Aqno;
+            td.insertAdjacentHTML('beforeend', '<div class="floatContainer"><label for="'+divId+'">'+cell[r-1][c-1].Aqno+'</label><input data-target="'+ number +'" oninput="evalGrid(this.id, '+n+', '+m+')" id="'+divId+'" class="crossword-board__item" type="text" minlength="1" maxlength="1" required="required" value="" style="width: '+width+'px; height: '+height+'px;"></div>');
+           }
          }
        }
        row.appendChild(td);
@@ -187,11 +197,19 @@ var buildMatrix = (parentID, cell, across, down, n, m, hintID) => {
    }
    table.appendChild(tableBody);
    hintBody.appendChild(table);
+   var j = 0;
    for(var i = 0; i < across.length ; i++){
     var row = document.getElementById('rowHint-'+(i+1));
     var cell = row.insertCell(0);
     cell.className = "hint-cell";
     cell.insertAdjacentHTML("beforeend", "<div class='hint-cell' id='A"+across[i].number+"'>"+across[i].hint+"</div>"); 
+    j++;
+   }
+   for(;j<down.length; j++){
+    var row = document.getElementById('rowHint-'+(i+1));
+    var cell = row.insertCell(0);
+    cell.className = "hint-cell";
+    cell.insertAdjacentHTML("beforeend", "<div class='hint-cell'></div>"); 
    }
    for(var i = 0; i < down.length ; i++){
     var row = document.getElementById('rowHint-'+(i+1));

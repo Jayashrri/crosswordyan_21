@@ -43,10 +43,10 @@
         for(var i = 0; i < words.length; i++){
             var c = words[i].startIndex.x;
             var r = words[i].startIndex.y;
-            cell[r][c].start = 1;
             var length = words[i].length;
             var qno = words[i].number;
             var orien = words[i].orientation == "across" ? 1 : 2;
+            cell[r][c].start += orien;
             if(orien == 1){
               across.push({number: words[i].number, orien:1, hint: words[i].clue});
             }
