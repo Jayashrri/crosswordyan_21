@@ -62,7 +62,7 @@ const getMailVerificationHtml = (link) => {
                             <tr>
                                 <td align="center" valign="top" style="padding: 36px 24px;">
                                 <a href="https://pragyan.org/">
-                                    <img src="https://pragyan.org/images/pragyan-logo-21.png" style="height:100px;width:75px">
+                                    <img src="https://pragyan.org/images/pragyan-logo-21.png" style="height:100px;width:200px">
                                 </a>
                                 </a>
                                 </td>
@@ -88,7 +88,7 @@ const getMailVerificationHtml = (link) => {
                             <tr>
                                 <td align="left" bgcolor="#ffffff" style="padding: 24px;  font-size: 16px; line-height: 24px;">
                                 <p style="margin: 0;">
-                                    Thank you for registering for Crosswordyan - Pragyan 2021! Please use the following link to activate your account and get started.
+                                    Thank you for registering for Crack It Connect It - Pragyan 2021! Please use the following link to activate your account and get started.
                                 </p>
                                 </td>
                             </tr>
@@ -173,7 +173,7 @@ module.exports.sendMail = async(email, verificationCode) => {
     const data = {
         from: config.sendgrid.FromAddress,
         to: email,
-        subject: 'Verify your email : Crosswordyan-21 - Pragyan 2021',
+        subject: 'Verify your email : Crack It Connect It - Pragyan 2021',
         html: html
     }
     return new Promise((resolve, reject) => {
