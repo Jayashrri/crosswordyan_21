@@ -83,6 +83,7 @@ body {
   text-align: center; 
   background-image: url(/assets/bg.png);
   font-family: "Nexa Light";
+  line-height: unset;
 }
 
 .game-btn{
