@@ -6,6 +6,11 @@ src: url("/assets/fonts/Nexa Bold.otf");
 font-family: "Nexa Light";
 src: url("/assets/fonts/Nexa Light.otf");
 }
+
+.card a{
+    color: white;
+}
+
 .login-container {
     border-radius: 30px;
     padding-bottom: 0%;
