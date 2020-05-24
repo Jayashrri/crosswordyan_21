@@ -157,7 +157,9 @@ table{
   border-spacing: 1px;
   border-collapse: separate;
 }
-
+#game-board1{
+  margin-bottom: 30px;
+}
 #game-board1 > table{
   background-color: white;
 }
