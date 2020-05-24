@@ -61,8 +61,8 @@ const getMailVerificationHtml = (link) => {
                         <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
                             <tr>
                                 <td align="center" valign="top" style="padding: 36px 24px;">
-                                <a href="https://pragyan.com/">
-                                    <img src="https://pragyan.com/assets/logo/pragyan-logo.png" style="height:100px;width:75px">
+                                <a href="https://pragyan.org/">
+                                    <img src="https://pragyan.org/assets/logo/pragyan-logo-21.png" style="height:100px;width:75px">
                                 </a>
                                 </a>
                                 </td>
@@ -120,12 +120,12 @@ const getMailVerificationHtml = (link) => {
                                             <tr style="border-bottom: 15px">
                                                 <td align="center">
                                                     <a href="https://www.facebook.com/pragyan/">
-                                                        <img src="https://pragyan.com/assets/media/facebook-logo-black.png" style="height:30px;width:30px">
+                                                        <img src="https://pragyan.org/assets/images/facebook-logo-black.png" style="height:30px;width:30px">
                                                     </a>
                                                 </td>
                                                 <td align="center">
                                                     <a href="https://www.instagram.com/pragyan/">
-                                                        <img src="https://pragyan.com/assets/media/instagram-logo-black.png" style="height:30px;width:30px">
+                                                        <img src="https://pragyan.org/assets/images/instagram-logo-black.png" style="height:30px;width:30px">
                                                     </a>
                                                 </td>
                                             </tr>

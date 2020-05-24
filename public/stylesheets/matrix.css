@@ -104,7 +104,7 @@ body {
 }
 
 .completed{
-  background-color: #72c7a2 !important;
+  background-color: orange !important;
 }
 /* ************************CROSSWORD PANEL*************************************** */
 
@@ -125,7 +125,7 @@ td{
   margin: 0 auto;
 }
 .crossword-board__item {
-  border: 1px solid #000;
+  border: 1px solid orange;
   background: transparent;
   display: inline;
   position: relative;
@@ -136,16 +136,16 @@ td{
 }
 
 .crossword-board__item:hover{
-  background-color: #5fcc49;
+  background-color: orange;
   border: 1px solid #000;
 }
 .crossword-board__item:active, .crossword-board__item:focus {
-  background: #5fcc49;
+  background: orange;
   border: 1px solid #000;
 }
 .crossword-board__item--blank {
-  background: #000;
-  border: 2px solid #000;
+  background: #72c7a2;
+  border: 2px solid #72c7a2;
 }
 
 .crossword-board--highlight {
