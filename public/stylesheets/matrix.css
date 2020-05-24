@@ -209,7 +209,7 @@ label {
 #hint-table{
   border-collapse: separate;
   border-spacing: 15px;
-  max-width: 70vw;
+  max-width: 90vw;
   font-size: 0.8em;
   background: rgba(0,0,0,0.7);
   border-radius: 10px;

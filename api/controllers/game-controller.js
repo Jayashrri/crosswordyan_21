@@ -68,7 +68,7 @@ exports.checkAnswer = async (req, res) => {
         if (across.length != 0) {
             across = orderWord(across);
             words.push({
-                word: encryption.encrypt(across.map(letter => letter.letter).join('')),
+                word: encryption.encrypt(across.map(letter => letter.letter).join('').toLowerCase()),
                 length: across.length,
                 orientation: 'across',
                 startIndex: {
@@ -80,7 +80,7 @@ exports.checkAnswer = async (req, res) => {
         if (down.length != 0) {
             down = orderWord(down);
             words.push({
-                word: encryption.encrypt(down.map(letter => letter.letter).join('')),
+                word: encryption.encrypt(down.map(letter => letter.letter).join('').toLowerCase()),
                 length: down.length,
                 orientation: 'down',
                 startIndex: {
