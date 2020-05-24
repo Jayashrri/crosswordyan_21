@@ -62,7 +62,7 @@ const getMailVerificationHtml = (link) => {
                             <tr>
                                 <td align="center" valign="top" style="padding: 36px 24px;">
                                 <a href="https://pragyan.org/">
-                                    <img src="https://pragyan.org/assets/logo/pragyan-logo-21.png" style="height:100px;width:75px">
+                                    <img src="https://pragyan.org/images/pragyan-logo-21.png" style="height:100px;width:75px">
                                 </a>
                                 </a>
                                 </td>
@@ -119,13 +119,13 @@ const getMailVerificationHtml = (link) => {
                                             <table border="0" cellpadding="0" cellspacing="5" style="margin-top: 20px; margin-bottom: 15px;">
                                             <tr style="border-bottom: 15px">
                                                 <td align="center">
-                                                    <a href="https://www.facebook.com/pragyan/">
-                                                        <img src="https://pragyan.org/assets/images/facebook-logo-black.png" style="height:30px;width:30px">
+                                                    <a href="https://www.facebook.com/pragyan.nitt/">
+                                                        <img src="https://pragyan.org/images/facebook-logo-black.png" style="height:30px;width:30px">
                                                     </a>
                                                 </td>
                                                 <td align="center">
-                                                    <a href="https://www.instagram.com/pragyan/">
-                                                        <img src="https://pragyan.org/assets/images/instagram-logo-black.png" style="height:30px;width:30px">
+                                                    <a href="https://www.instagram.com/pragyan_nitt/">
+                                                        <img src="https://pragyan.org/images/instagram-logo-black.png" style="height:30px;width:30px">
                                                     </a>
                                                 </td>
                                             </tr>
